@@ -17,4 +17,6 @@ jobs:
     name: A job to say finish
     steps:
       - name: Echo finish
-        run: echo 'finish'
+        run: |
+            sleep 60 
+            echo 'finish'

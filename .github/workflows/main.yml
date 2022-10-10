@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say finish
     steps:
+      - name: sleep
+        run: echo 'sleep 60 seconds' 
       - name: Echo finish
-        run: |
-            sleep 60 
-            echo 'finish'
+        run: echo 'finish'

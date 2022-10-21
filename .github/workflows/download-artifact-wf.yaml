@@ -10,6 +10,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+      - name: Output Run ID
+        run: echo ${{ github.run_id }}
+      - name: Output Run Number
+        run: echo ${{ github.run_number }}
+      - name: Output Run Attempt
+        run: echo ${{ github.run_attempt }}
       - name: Download a single artifact from another workflow
         uses: dawidd6/action-download-artifact@v2
         with:

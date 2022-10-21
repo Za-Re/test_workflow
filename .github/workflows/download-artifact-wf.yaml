@@ -15,7 +15,7 @@ jobs:
         with:
           name: artifacts
           path: extracted
-          run_number: 12 
+          workflow: download-artifact-wf.yaml 
       - name: Extract files
         run: ls -R extracted
         shell: bash

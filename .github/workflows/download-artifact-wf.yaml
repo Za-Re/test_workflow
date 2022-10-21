@@ -1,0 +1,20 @@
+name: downloadArtifact 
+
+on:
+  workflow_run:
+    workflows: [uploadArtifact]
+    types: [completed]
+jobs:
+  downloadArtifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Download a single artifact from another workflow
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: artifacts
+          path: extracted
+      - name: Extract files
+        run: ls -R extracted
+        shell: bash

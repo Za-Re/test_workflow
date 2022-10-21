@@ -15,7 +15,7 @@ jobs:
         with:
           name: artifacts
           path: extracted
-          run_id: 3296492893
+          run_number: 10 
       - name: Extract files
         run: ls -R extracted
         shell: bash

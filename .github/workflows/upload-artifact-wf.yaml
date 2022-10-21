@@ -1,0 +1,19 @@
+name: uploadArtifact
+
+on: [push]
+
+jobs:
+  uploadArtifact:
+    runs-on: ubunto-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Run build script
+        run: ./scripts/create-artifact.sh
+        shell: bash
+      - name: Archive
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: files/*
+          retention-days: 1

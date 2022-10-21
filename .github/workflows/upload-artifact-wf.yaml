@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   uploadArtifact:
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest 
     steps:
       - name: checkout
         uses: actions/checkout@v3

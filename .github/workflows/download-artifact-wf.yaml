@@ -20,11 +20,9 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           name: artifacts
-          search_artifacts: true
-          #run_number: 16
-          #run_id: 3310776491 
+          #search_artifacts: true
           path: extracted
-          workflow: download-artifact-wf.yaml 
+          workflow: upload-artifact-wf.yaml 
       - name: Extract files
         run: ls -R extracted
         shell: bash

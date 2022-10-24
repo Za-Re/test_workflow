@@ -20,7 +20,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           name: artifacts
-          run_number: 15
+          run_number: 16 
           path: extracted
           workflow: download-artifact-wf.yaml 
       - name: Extract files

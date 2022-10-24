@@ -24,7 +24,7 @@ jobs:
           #run_number: 16
           #run_id: 3310776491 
           path: extracted
-          workflow: upload-artifact-wf.yaml 
+          workflow: download-artifact-wf.yaml 
       - name: Extract files
         run: ls -R extracted
         shell: bash

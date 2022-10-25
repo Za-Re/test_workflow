@@ -26,20 +26,17 @@ jobs:
       - name: Extract files
         run: ls -R extracted
         shell: bash
+      - name: Add tf files to artefacts
+        run: |
+          cd extracted
+          touch main.tf tfvars.tf
+        shell: bash
+      - name: Extract all files
+        run: ls -R extracted
+        shell: bash
       - name: Archive files
         uses: actions/upload-artifact@v3
         with:
           name: artifactsV2
           path: extracted/*
           retention-days: 1
-#  uploadArtifacts:
-#    needs: [downloadArtifact]
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Archive
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: artifactsV2
-#          path: extracted/*
-#          retention-days: 1
-#

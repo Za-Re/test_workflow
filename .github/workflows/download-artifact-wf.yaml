@@ -26,14 +26,20 @@ jobs:
       - name: Extract files
         run: ls -R extracted
         shell: bash
-  uploadArtifacts:
-    needs: [downloadArtifact]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Archive
+      - name: Archive files
         uses: actions/upload-artifact@v3
         with:
           name: artifactsV2
           path: extracted/*
           retention-days: 1
-
+#  uploadArtifacts:
+#    needs: [downloadArtifact]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Archive
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: artifactsV2
+#          path: extracted/*
+#          retention-days: 1
+#

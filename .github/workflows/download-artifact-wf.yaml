@@ -2,7 +2,7 @@ name: downloadArtifact
 
 on:
   workflow_run:
-    workflows: [uploadArtifact]
+    workflows: [hello-world]
     types: [completed]
 jobs:
   downloadArtifact:
